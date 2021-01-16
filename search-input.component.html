@@ -1,0 +1,7 @@
+<div style="margin:50px;">
+    child1 : <span>
+        <input type="text" [(ngModel)]="searchText">
+    </span><br>
+    Selected Data : <span name="selectedUser">{{selectedUserName}}</span>
+</div>
+<app-users-list [searchText]="searchText"></app-users-list>

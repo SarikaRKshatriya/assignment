@@ -1,0 +1,18 @@
+<div style="margin-left:300px;margin-top: -90px;">
+    Input Text: {{selectedText}}
+    <br>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Email</th>
+        </tr>
+        <tr *ngFor = "let d of tableData | filterBy:selectedText:'name'">
+            <td>{{d.id}}</td>
+            <td (click)="clickRow(d.name)">{{d.name}}</td> 
+            <td>{{d.username}} </td> 
+            <td>{{d.email}}</td>
+        </tr>
+    </table>
+  </div>
